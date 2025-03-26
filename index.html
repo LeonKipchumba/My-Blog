@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>How to Use the Fetch API for Web Requests</title>
+    <style>
+        body { font-family: Arial, sans-serif; line-height: 1.6; margin: 20px; padding: 20px; }
+        h1, h2 { color: #333; }
+        pre { background: #f4f4f4; padding: 10px; border-radius: 5px; }
+    </style>
+</head>
+<body>
+    <h1>How to Use the Fetch API for Web Requests</h1>
+    <p>The Fetch API provides a modern way to make HTTP requests in JavaScript. It is simpler and more powerful than older methods like XMLHttpRequest.</p>
+    
+    <h2>What is Fetch API?</h2>
+    <p>The Fetch API allows us to make network requests asynchronously and handle responses using Promises.</p>
+
+    <h3>Example:</h3>
+    <pre>
+    <code>
+fetch('https://api.example.com/data')
+  .then(response => response.json())
+  .then(data => console.log(data))
+  .catch(error => console.error('Error:', error));
+    </code>
+    </pre>
+
+    <h2>Why Use Fetch API?</h2>
+    <ul>
+        <li>Simpler syntax</li>
+        <li>Supports JSON parsing</li>
+        <li>Can handle different HTTP methods like GET, POST, PUT, DELETE</li>
+    </ul>
+
+    <h2>Making a POST Request</h2>
+    <pre>
+    <code>
+fetch('https://api.example.com/data', {
+  method: 'POST',
+  headers: { 'Content-Type': 'application/json' },
+  body: JSON.stringify({ name: 'John Doe' })
+})
+  .then(response => response.json())
+  .then(data => console.log('Success:', data))
+  .catch(error => console.error('Error:', error));
+    </code>
+    </pre>
+
+    <h2>Conclusion</h2>
+    <p>The Fetch API is a powerful tool for making web requests in JavaScript. It’s widely used in modern web applications.</p>
+</body>
+</html>
